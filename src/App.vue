@@ -37,10 +37,12 @@ body {
     font-weight: 800;
     font-style: normal;
   }
-  @font-face{src:url(https://framerusercontent.com/modules/assets/4CrTRFdRCTU3oiIfJegIJg4Kw~cvNwK-ixw50yj4byZxwUruUsEfyxIt6WbmfpkvdjnoM.ttf);
-    font-family:PP Neue Machina Ultrabold
+  @font-face{
+    src:url(https://framerusercontent.com/modules/assets/4thwIOvYFOFhAXrzDsrImh1qlw~qwrXOQhxSB17CsgJlKQ2QlaYBYgSiTSToshyFBLf52I.ttf);
+    font-family:PP Migra Italic Extrabold Italic}
+  @font-face{src:url(https://framerusercontent.com/modules/assets/Gn02Ossg31sMD023kBy1urOA3mI~61VBMEqi--CyZ8_VzGyCX5F6rJTNc9PWcPhFrQjKVfc.otf);
+    font-family:PP Neue Machina Regular
   }
-  @font-face{src:url(https://framerusercontent.com/modules/assets/Gn02Ossg31sMD023kBy1urOA3mI~61VBMEqi--CyZ8_VzGyCX5F6rJTNc9PWcPhFrQjKVfc.otf);font-family:PP Neue Machina Regular}
   @font-face {
     font-family: 'Neue Machina';
     src: local('Neue Machina Ultra bold'), local('Neue-Machina-Ultra-bold'),
@@ -71,5 +73,14 @@ body {
   overflow: hidden;
   padding: 0;
   margin: 0;
+}
+
+:root {
+  --index: calc(1vh + 1vw);
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 </style>
