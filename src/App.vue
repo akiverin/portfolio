@@ -40,8 +40,9 @@ body {
   @font-face{
     src:url(https://framerusercontent.com/modules/assets/4thwIOvYFOFhAXrzDsrImh1qlw~qwrXOQhxSB17CsgJlKQ2QlaYBYgSiTSToshyFBLf52I.ttf);
     font-family:PP Migra Italic Extrabold Italic}
-  @font-face{src:url(https://framerusercontent.com/modules/assets/Gn02Ossg31sMD023kBy1urOA3mI~61VBMEqi--CyZ8_VzGyCX5F6rJTNc9PWcPhFrQjKVfc.otf);
-    font-family:PP Neue Machina Regular
+  @font-face{src: local('Neue Machina Ultra bold'), local('Neue-Machina-Ultra-bold'),
+        url('assets/PPNeueMachina-Regular.otf') format('woff2');
+    font-family: 'PP Neue Machina Regular'
   }
   @font-face {
     font-family: 'Neue Machina';

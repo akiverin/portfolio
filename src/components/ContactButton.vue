@@ -17,9 +17,7 @@ export default {
 .hero__contact {
     cursor: pointer;
     display: flex;
-    width: 171px;
-    height: 70px;
-    padding: 23px 46px 23px 32px;
+    padding: 23px 32px;
     flex-direction: column;
     justify-content: center;
     align-items: center;

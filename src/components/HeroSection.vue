@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <section class="hero">
     <div class="hero__wrapper wrapper">
       <div class="hero__window">
         <div class="hero__field hero__field--name">
@@ -16,11 +16,13 @@
         </div>
       </div>
       <div class="hero__info">
-        <p class="hero__desc">Frontend разработчик с акцентом на навыки, связанные с дизайном, такие как UI / UX-дизайн, адаптивный дизайн и кроссбраузерная совместимость.</p>
+        <p class="hero__desc">
+          Frontend разработчик с&nbsp;акцентом на&nbsp;навыки, связанные с&nbsp;дизайном, такие как UI&nbsp;/ UX-дизайн, адаптивный дизайн и&nbsp;кроссбраузерная совместимость.        </p>
         <ContactButton />
       </div>
     </div>
-  </div>
+    <img src="../assets/icons/line.svg" alt="" class="hero__line">
+  </section>
 </template>
 
 <script>
@@ -38,10 +40,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
+.hero {
+  position: relative;
+}
+
 .hero__wrapper {
   display: flex;
   flex-direction: column;
   gap: 0px;
+  padding: 0 5%;
 }
 
 .hero__window {
@@ -54,7 +61,7 @@ export default {
 
 .hero__title {
   font-family: 'Neue Machina', Inter, Arial;
-  font-size: calc(var(--index)*5);
+  font-size: 140px;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
@@ -84,7 +91,7 @@ export default {
 }
 .hero__icon {
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   &--fillStar {
     top: -80px;
     left: 40%;
@@ -99,4 +106,26 @@ export default {
   }
 }
 
+.hero__info {
+  display: flex;
+  flex: 0 0 auto;
+  place-content: center space-between;
+  align-items: center;
+}
+.hero__desc {
+  font-family: 'PP Neue Machina Regular';
+  font-size: 22px;
+  width: 50%;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.hero__line {
+    bottom: -360px;
+    flex: 0 0 auto;
+    left: -300px;
+    position: absolute;
+    width: 1187px;
+    z-index: -2;
+}
 </style>
