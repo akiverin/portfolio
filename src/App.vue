@@ -1,11 +1,10 @@
 <template>
   <div class="window" :style="{ transform: `translateX(${rotation}%) translateY(${rotation*2}%) translateZ(0px)` }"></div>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HeroSection msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeroSection from './components/HeroSection.vue';
 
 export default {
   name: 'App',
@@ -21,8 +20,8 @@ export default {
     }, 100);
   },
   components: {
-    HelloWorld
-  },
+    HeroSection
+},
 }
 </script>
 
@@ -31,6 +30,25 @@ body {
   background-color: rgb(26, 24, 30);
   padding: 0;
   margin: 0;
+  @font-face {
+    font-family: 'Migra Italic';
+    src: local('Migra Italic'), local('Migra Italic'),
+        url('assets/PP-Migra-Italic-Extrabold-Italic.ttf') format('ttf');
+    font-weight: 800;
+    font-style: normal;
+  }
+  @font-face{src:url(https://framerusercontent.com/modules/assets/4CrTRFdRCTU3oiIfJegIJg4Kw~cvNwK-ixw50yj4byZxwUruUsEfyxIt6WbmfpkvdjnoM.ttf);
+    font-family:PP Neue Machina Ultrabold
+  }
+  @font-face{src:url(https://framerusercontent.com/modules/assets/Gn02Ossg31sMD023kBy1urOA3mI~61VBMEqi--CyZ8_VzGyCX5F6rJTNc9PWcPhFrQjKVfc.otf);font-family:PP Neue Machina Regular}
+  @font-face {
+    font-family: 'Neue Machina';
+    src: local('Neue Machina Ultra bold'), local('Neue-Machina-Ultra-bold'),
+        url('assets/NeueMachina-Ultrabold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+  }
+
 }
 .window {
   background: url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png");
@@ -48,7 +66,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
   margin-top: 60px;
   overflow: hidden;
   padding: 0;
