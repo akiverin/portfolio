@@ -23,7 +23,7 @@
       <div class="hero__info">
         <p class="hero__desc">
           Frontend разработчик с&nbsp;акцентом на&nbsp;навыки, связанные с&nbsp;дизайном, такие как UI&nbsp;/ UX-дизайн, адаптивный дизайн и&nbsp;кроссбраузерная совместимость.        </p>
-        <ContactButton />
+        <Button>Связаться</Button>
       </div>
     </div>
     <img src="../assets/icons/line.svg" alt="" class="hero__line">
@@ -32,14 +32,14 @@
 
 <script>
 import Badge from './Badge.vue';
-import ContactButton from './ContactButton.vue';
+import Button from './Button.vue';
 
 export default {
     name: 'HeroSection',
     props: {
         msg: String
     },
-    components: { ContactButton, Badge }
+    components: { Badge, Button }
 }
 </script>
 

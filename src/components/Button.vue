@@ -1,20 +1,15 @@
 <template>
-    <button class="hero__contact">Связаться</button>
+    <button class="button"><slot></slot></button>
 </template>
 
 <script>
 export default {
-    name: "ContactButton",
-    props: {
-        msg: {
-        type: String,
-    },
-},
+    name: "ButtonComponent",
 }
 </script>
 
 <style scoped lang="scss">
-.hero__contact {
+.button {
     cursor: pointer;
     display: flex;
     padding: 23px 32px;
@@ -30,5 +25,9 @@ export default {
     font-weight: 400;
     line-height: 1.2;
     font-family: 'Neue Machina', Inter, Arial;
+    transition: all 200ms ease-in-out;
+    &:hover {
+        transform: scale(1.04);
+    }
 }
 </style>
