@@ -1,10 +1,15 @@
 <template>
+  <Header/>
   <div class="window" :style="{ transform: `translateX(${rotation}%) translateY(${rotation*2}%) translateZ(0px)` }"></div>
-  <HeroSection msg="Welcome to Your Vue.js App"/>
+  <HeroSection />
+  <ProjectsSection />
+
 </template>
 
 <script>
+import Header from './components/Header.vue';
 import HeroSection from './components/HeroSection.vue';
+import ProjectsSection from './components/ProjectsSection.vue';
 
 export default {
   name: 'App',
@@ -20,7 +25,9 @@ export default {
     }, 100);
   },
   components: {
-    HeroSection
+    HeroSection,
+    Header,
+    ProjectsSection
 },
 }
 </script>
@@ -83,5 +90,18 @@ body {
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 </style>

@@ -3,6 +3,11 @@
     <div class="hero__wrapper wrapper">
       <div class="hero__window">
         <div class="hero__field hero__field--name">
+          <div class="hero__badges badges">
+            <Badge>team-work</Badge>
+            <Badge>design</Badge>
+            <Badge>mobile</Badge>
+          </div>
           <h1 class="hero__title">Андрей</h1>
           <img src="../assets/icons/fillStar.svg" alt="star icon descorate" class="hero__icon hero__icon--fillStar">
         </div>
@@ -26,6 +31,7 @@
 </template>
 
 <script>
+import Badge from './Badge.vue';
 import ContactButton from './ContactButton.vue';
 
 export default {
@@ -33,7 +39,7 @@ export default {
     props: {
         msg: String
     },
-    components: { ContactButton }
+    components: { ContactButton, Badge }
 }
 </script>
 
@@ -42,6 +48,7 @@ export default {
 
 .hero {
   position: relative;
+  margin-bottom: 60px;
 }
 
 .hero__wrapper {
@@ -56,12 +63,12 @@ export default {
   flex-direction: column;
   align-items: flex-end;
   max-width: 80%;
-  margin: 320px auto 120px;
+  margin: 160px auto 120px;
 }
 
 .hero__title {
   font-family: 'Neue Machina', Inter, Arial;
-  font-size: 140px;
+  font-size: 148px;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
@@ -127,5 +134,14 @@ export default {
     position: absolute;
     width: 1187px;
     z-index: -2;
+}
+
+.badges {
+  position: absolute;
+  left: -204px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: -1;
 }
 </style>
