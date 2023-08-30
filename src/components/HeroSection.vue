@@ -144,4 +144,40 @@ export default {
   gap: 6px;
   z-index: -1;
 }
+
+@media screen and (max-width: 768px){
+  .hero__title {
+    font-size: 92px;
+    &--italic {
+      font-size: 72px;
+    }
+  }
+
+  .hero__icon {
+    position: absolute;
+    z-index: -2;
+    &--fillStar {
+      top: -80px;
+      left: 40%;
+    }
+    &--strokeStar {
+      top: -5%;
+      left: -10%;
+    }
+    &--arrow {
+      transform: scale(0.8);
+      top: 0px;
+      right: -180px;
+    }
+  }
+
+  .badges {
+    position: absolute;
+    left: -100px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: -1;
+  }
+}
 </style>
