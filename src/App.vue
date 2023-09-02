@@ -1,9 +1,12 @@
 <template>
-  <Header/>
-  <div class="window" :style="{ transform: `translateX(${rotation}%) translateY(${rotation*2}%) translateZ(0px)` }"></div>
-  <HeroSection />
-  <ProjectsSection />
-
+  <Header />
+  <div class="noisy" :style="{ transform: `translateX(${rotation}%) translateY(${rotation*2}%) translateZ(0px)` }"></div>
+  <main class="main">
+    <div class="main__wrapper">
+      <HeroSection data-speed="0.8" />
+      <ProjectsSection />
+    </div>
+  </main>
 </template>
 
 <script>
@@ -20,23 +23,31 @@ export default {
   },
   mounted() {
     var self = this;
-    setInterval(function () {
-      self.rotation = Math.floor(Math.random()*10);
-    }, 100);
+    setInterval(
+      function () {
+        self.rotation = Math.floor(Math.random()*10);
+      }, 
+    100);
   },
   components: {
     HeroSection,
     Header,
-    ProjectsSection
+    ProjectsSection,
 },
 }
 </script>
 
 <style lang="scss">
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(26, 24, 30);
   padding: 0;
   margin: 0;
+  font-size: 1vw;
   @font-face {
     font-family: 'Migra Italic';
     src: local('Migra Italic'), local('Migra Italic'),
@@ -60,7 +71,7 @@ body {
   }
 
 }
-.window {
+.noisy {
   background: url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png");
   opacity: 0.1;
   inset: -200%;

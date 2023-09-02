@@ -5,7 +5,7 @@
             <div class="projects__head">
                 <h1 class="projects__title">Все мои</h1>
                 <img src="../assets/icons/strokeStar.svg" alt="decorate icon" class="projects__icon projects__icon--sstar">
-                <h1 data-speed="4" class="projects__name">Projects</h1>
+                <h1 class="projects__name">Projects</h1>
             </div>
             <p class="projects__desc">Здесь вы найдете некоторые из моих проектов, которые я реализовал в качестве фронтенд разработчика и дизайнера. Многие из них были выполнены во время моего обучения, а также в командной работе и в рамках проектной деятельности.</p>
             <img src="../assets/icons/fillStar.svg" alt="decorate icon" class="projects__icon projects__icon--fstar">
@@ -16,7 +16,10 @@
                     <h2 class="case__title">{{ item.name }}</h2>
                     <p class="case__desc">{{ item.desc }}</p>
                     <div class="case__actions">
-                        <a v-if="item.link" :href="item.link" class="case__link">Перейти</a>
+                        <a v-if="item.link" :href="item.link" class="case__link">
+                            Перейти
+                            <img src="../assets/icons/open.svg" alt="follow the link icon" class="case__follow">
+                        </a>
                         <a v-if="item.rep" :href="item.rep" class="case__link">Репозиторий</a>
                     </div>
                 </li>
@@ -28,8 +31,6 @@
   </template>
   
   <script>
-  import { gsap } from 'gsap';
-
   export default {
       name: 'ProjectsSection',
       data(){
@@ -82,25 +83,6 @@
             ]
         }
       },
-      mounted(){
-        this.anim();
-      },
-      methods: {
-        anim(){
-            gsap.fromTo(".case",{
-                x: -100,
-            }, 
-            {
-            scrollTrigger:{
-                trigger: ".case", 
-                start: "top bottom", 
-                end: "bottom top", 
-                scrub: 1
-            },
-			x: 0
-		})
-        }
-      }
   }
   </script>
   
@@ -186,26 +168,63 @@
 
   .projects__list {
     list-style: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(460px, 1fr));
     flex-wrap: wrap;
-    gap: 4%;
+    column-gap: 60px;
+    row-gap: 20px;
     justify-content: center;
   }
 
   .projects__item {
     z-index: 0;
-    max-width: 720px;
-    min-width: 560px;
-    width: 40%;
+    // max-width: 720px;
+    // min-width: 560px;
+    width: 100%;
     padding: 20px;
-    border: 1px solid black;
     font-family: 'PP Neue Machina Regular';
     color: black;
+  }
+
+  .case__title {
+    font-size: 36px;
+    font-weight: 800;
+  }
+  .case__desc {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
   }
   .case__media {
     width: 100%;
     border-radius: 20px;
     object-fit: cover;
+  }
+
+  .case__actions {
+    display: flex;
+    gap: 20px;
+
+  }
+
+  .case__link {
+    height: 3.75em;
+    color: #191919;
+    text-decoration: none;
+    border: 1px solid #191919;
+    border-radius: 100em;
+    justify-content: center;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    font-size: 1.35em;
+    width: fit-content;
+    transition: all 200ms ease-in-out;
+    &:hover {
+        background-color: #191919;
+        color: white;
+    }
   }
 
   @media screen and (max-width: 768px) {
