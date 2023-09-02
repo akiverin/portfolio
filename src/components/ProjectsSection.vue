@@ -95,8 +95,6 @@
   }
   .projects__info {
     position: relative;
-    place-content: flex-start;
-    align-items: flex-start;
     display: flex;
     justify-content: space-between;
     flex-flow: row;
@@ -105,8 +103,6 @@
     height: min-content;
     overflow: visible;
     padding: 0px;
-    position: relative;
-    width: 100%;
   }
 
   .projects__head {
@@ -119,8 +115,7 @@
     gap: 0px;
     height: min-content;
     overflow: hidden;
-    padding: 0px;
-    width: 515px;
+    padding: 10px 28px;
 }
   .projects__title {
     font-family: 'Neue Machina';
@@ -146,8 +141,8 @@
   .projects__desc {
     color: black;
     font-family: 'PP Neue Machina Regular';
-    font-size: 22px;
     max-width: 50%;
+    font-size: 22px;
     text-align: left;
     line-height: 1.5;
   }
@@ -155,8 +150,8 @@
   .projects__icon {
     position: absolute;
     &--sstar {
-        left: 155px;
-        top: 50px;
+        left: 185px;
+        top: 60px;
         transform: rotate(-30deg);
     }
     &--fstar {
@@ -171,16 +166,17 @@
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(460px, 1fr));
     flex-wrap: wrap;
-    column-gap: 60px;
+    column-gap: 20px;
     row-gap: 20px;
     justify-content: center;
+    padding: 0;
+    margin: 0;
   }
 
   .projects__item {
     z-index: 0;
     // max-width: 720px;
     // min-width: 560px;
-    width: 100%;
     padding: 20px;
     font-family: 'PP Neue Machina Regular';
     color: black;

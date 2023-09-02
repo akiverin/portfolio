@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "core-js": "^3.8.3",
     "gsap": "^3.12.2",
     "gsap-trial": "^3.12.2",

@@ -77,5 +77,7 @@ export default {
         &:active {
             border-color: #f1f1f1;
         }
+        &::placeholder {
+        }
     }
 </style>
