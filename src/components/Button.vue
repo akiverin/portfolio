@@ -29,5 +29,8 @@ export default {
     &:hover {
         transform: scale(1.04);
     }
+    &::placeholder {
+        color: #f1f1f1;
+    }
 }
 </style>

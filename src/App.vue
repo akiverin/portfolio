@@ -5,11 +5,13 @@
     <div class="main__wrapper">
       <HeroSection data-speed="0.8" />
       <ProjectsSection />
+      <ContactSection />
     </div>
   </main>
 </template>
 
 <script>
+import ContactSection from './components/ContactSection.vue';
 import Header from './components/Header.vue';
 import HeroSection from './components/HeroSection.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
@@ -33,6 +35,7 @@ export default {
     HeroSection,
     Header,
     ProjectsSection,
+    ContactSection
 },
 }
 </script>
