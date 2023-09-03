@@ -5,15 +5,17 @@
     <div class="main__wrapper">
       <HeroSection data-speed="0.8" />
       <ProjectsSection />
-      <ContactSection />
+      <ContactSection @notificate-new="sendNotification"/>
     </div>
   </main>
+  <Notification v-show="this.notification!=''" :msg="notification" @close-notificate="()=>{this.notification=''}"/>
 </template>
 
 <script>
 import ContactSection from './components/ContactSection.vue';
 import Header from './components/Header.vue';
 import HeroSection from './components/HeroSection.vue';
+import Notification from './components/Notification.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
 
 export default {
@@ -21,6 +23,7 @@ export default {
   data() {
     return {
       rotation: 0,
+      notification: '',
     };
   },
   mounted() {
@@ -31,11 +34,20 @@ export default {
       }, 
     100);
   },
+  methods: {
+    sendNotification(){
+      this.notification = "Письмо отправлено!";
+      setTimeout(() => {
+        this.notification = "";
+      }, 15000);
+    }
+  },
   components: {
     HeroSection,
     Header,
     ProjectsSection,
-    ContactSection
+    ContactSection,
+    Notification
 },
 }
 </script>
@@ -104,6 +116,7 @@ body {
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 5%;
 }
 
 .visually-hidden {

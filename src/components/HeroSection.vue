@@ -55,7 +55,6 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 0px;
-  padding: 0 5%;
 }
 
 .hero__window {
@@ -172,8 +171,10 @@ export default {
   }
 
   .badges {
+    transform: scale(0.7);
     position: absolute;
-    left: -100px;
+    top: -20px;
+    left: -140px;
     display: flex;
     flex-direction: column;
     gap: 6px;

@@ -20,7 +20,10 @@
                             Перейти
                             <img src="../assets/icons/open.svg" alt="follow the link icon" class="case__follow">
                         </a>
-                        <a v-if="item.rep" :href="item.rep" class="case__link">Репозиторий</a>
+                        <a v-if="item.rep" :href="item.rep" class="case__link">
+                          Репозиторий
+                          <img src="../assets/icons/github.svg" alt="follow the link icon" class="case__follow">
+                        </a>
                     </div>
                 </li>
 
@@ -90,7 +93,8 @@
 
   .projects__wrapper {
     border-radius: 40px;
-    padding: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     background-color: white;
   }
   .projects__info {
@@ -198,40 +202,81 @@
   }
 
   .case__actions {
+    place-content: center;
     display: flex;
-    gap: 20px;
+    gap: 10px;
 
   }
 
   .case__link {
-    height: 3.75em;
-    color: #191919;
-    text-decoration: none;
-    border: 1px solid #191919;
-    border-radius: 100em;
+    cursor: pointer;
+    position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 32px;
-    padding-right: 32px;
-    display: flex;
-    font-size: 1.35em;
-    width: fit-content;
-    transition: all 200ms ease-in-out;
+    text-decoration: none;
+    padding: 18px 22px;
+    font-family: 'PP Neue Machina Regular';
+    border: 1px solid #020202;
+    color: #020202;
+    background-color: transparent;
+    border-radius: 12px;
+    font-size: 22px;
+    transition: all .5s;
+    margin: 10px;
     &:hover {
-        background-color: #191919;
         color: white;
+        background-color: #020202;
+        border: 1px solid transparent;
+        & .case__follow {
+          filter: invert(100%);
+        }
     }
+  }
+
+  .case__follow {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    height: 18px;
+    width: 18px;
   }
 
   @media screen and (max-width: 768px) {
     .projects__desc {
         max-width: 100%;
-  }
-  .projects__icon--fstar {
+        font-size: 20px;
+    }
+    .projects__icon--fstar {
         right: 20px;
         bottom: -20px;
         transform: rotate(-30deg);
     }
+
+    .case__title {
+      font-size: 22px;
+    }
+
+    .case__desc {
+      font-size: 16px;
+      line-height: 1.4;
+    }
   }
-  </style>
-  
+  @media screen and (max-width: 560px) {
+    .projects__list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 20px;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .projects__item {
+      padding: 0;
+    }
+  }
+</style>

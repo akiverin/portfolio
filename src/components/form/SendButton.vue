@@ -27,8 +27,11 @@ export default {
         background-color: transparent;
         border: 1px solid #f1f1f1;
     }
-    &::placeholder {
-        color: #f1f1f1;
-    }
 }
+
+@media screen and (max-width: 560px){
+        .button {
+            font-size: 20px;
+        }
+    }
 </style>

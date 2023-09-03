@@ -12,19 +12,19 @@ export default {
             required: true
         },
         placeholder: {
-            type: Text,
+            type: String,
             default: '',
         },
         required: {
-            type: Boolean,
-            default: false,
+            type: String,
+            default: 'false',
         },
         name: {
-            type: Text,
+            type: String,
             default: '',
         },
         id: {
-            type: Text,
+            type: String,
             default: '',
         },
     },
@@ -67,6 +67,12 @@ export default {
         }
         &:active {
             border-color: #f1f1f1;
+        }
+    }
+
+    @media screen and (max-width: 560px){
+        .textarea {
+            font-size: 18px;
         }
     }
 </style>

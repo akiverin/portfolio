@@ -20,27 +20,27 @@ export default {
             required: true
         },
         msg: {
-            type: Text,
+            type: String,
             default: '',
         },
         required: {
-            type: Boolean,
-            default: false,
+            type: String,
+            default: 'false',
         },
         placeholder: {
-            type: Text,
+            type: String,
             default: '',
         },
         type: {
-            type: Text,
+            type: String,
             default: '',
         },
         name: {
-            type: Text,
+            type: String,
             default: '',
         },
         id: {
-            type: Text,
+            type: String,
             default: '',
         },
     },
@@ -66,7 +66,7 @@ export default {
         border: 1px solid rgba(241,241,241,.35);
         border-radius: 12px;
         margin: 10px;
-        padding: 0 18px;
+        padding: 0 0 0 18px;
         font-size: 20px;
         line-height: 1.5;
         transition: all .45s;
@@ -78,6 +78,12 @@ export default {
             border-color: #f1f1f1;
         }
         &::placeholder {
+        }
+    }
+
+    @media screen and (max-width: 560px){
+        .input {
+            font-size: 18px;
         }
     }
 </style>

@@ -3,12 +3,12 @@
         <div class="contact__wrapper wrapper">
             <h1 class="contact__title">Связаться</h1>
             <h2 class="contact__subtitle">no email</h2>
-            <form class="contact__form form" @submit="onSubmit">
+            <form ref="contactForm" class="contact__form form" @submit="onSubmit">
                 <div class="form__info">
                     <InputText v-model="form.name" type="text" required="true" placeholder="Ваше имя" name="name" id="nameInput"/>
                     <InputText v-model="form.email" type="email" required="true" placeholder="Email" name="email" id="emailInput"/>
                 </div>
-                <TextArea v-model="form.msg" required="true" placeholder="Ваше сообщение" minlength="12" name="message" id="messageInput"></TextArea>
+                <TextArea v-model="form.msg" required="true" placeholder="Ваше сообщение" name="message" id="messageInput"></TextArea>
                 <SendButton>Отправить</SendButton>
             </form>
         </div>
@@ -45,6 +45,8 @@ export default {
             }, (error) => {
                 console.log('FAILED...', error.text);
             });
+            document.querySelector('.form').reset();
+            this.$emit('notificate-new');
         }
     },
     components: { InputText, TextArea, SendButton }
