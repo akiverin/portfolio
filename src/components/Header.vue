@@ -30,11 +30,23 @@ export default {
 }
 .logo__image {
     width: 64px;
+    @media screen and (max-width: 760px) {
+        width: 52px;
+    }
+    @media screen and (max-width: 560px) {
+        width: 36px;
+    }
 }
 
 .navigate {
     display: flex;
     gap: 60px;
+    @media screen and (max-width: 760px) {
+        gap: 40px;
+    }
+    @media screen and (max-width: 560px) {
+        gap: 20px;
+    }
 }
 
 .navigate__link {
@@ -47,6 +59,13 @@ export default {
     &:hover {
         text-decoration: underline;
         color: rgb(49, 189, 214);
+    }
+
+    @media screen and (max-width: 760px) {
+        font-size: 20px;
+    }
+    @media screen and (max-width: 560px) {
+        font-size: 18px;
     }
 }
 </style>

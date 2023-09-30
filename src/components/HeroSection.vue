@@ -1,23 +1,23 @@
 <template>
   <section class="hero">
     <div class="hero__wrapper wrapper">
-      <div class="hero__window">
+      <div class="hero__window" data-scroll-section>
         <div class="hero__field hero__field--name">
-          <div class="hero__badges badges">
+          <div class="hero__badges badges" data-scroll data-scroll-speed=".1">
             <Badge>team-work</Badge>
             <Badge>design</Badge>
             <Badge>mobile</Badge>
           </div>
-          <h1 class="hero__title">Андрей</h1>
-          <img src="../assets/icons/fillStar.svg" alt="star icon descorate" class="hero__icon hero__icon--fillStar">
+          <h1 class="hero__title" data-scroll data-scroll-speed=".15">Андрей</h1>
+          <img src="../assets/icons/fillStar.svg" alt="star icon descorate" class="hero__icon hero__icon--fillStar" data-scroll data-scroll-speed=".2">
         </div>
         <div class="hero__field hero__field--post">
-          <h1 class="hero__title hero__title--italic">frontend</h1>
-          <img src="../assets/icons/arrow.svg" alt="arrow icon descorate" class="hero__icon hero__icon--arrow">
+          <h1 class="hero__title hero__title--italic" data-scroll data-scroll-speed=".25">frontend</h1>
+          <img src="../assets/icons/arrow.svg" alt="arrow icon descorate" class="hero__icon hero__icon--arrow" data-scroll data-scroll-speed=".25">
         </div>
-        <div class="hero__field hero__field--surname">
-          <img src="../assets/icons/strokeStar.svg" alt="star icon descorate" class="hero__icon hero__icon--strokeStar">
-          <h1 class="hero__title">Киверин</h1>
+        <div class="hero__field hero__field--surname" >
+          <img src="../assets/icons/strokeStar.svg" data-scroll data-scroll-speed=".15" alt="star icon descorate" class="hero__icon hero__icon--strokeStar">
+          <h1 class="hero__title" data-scroll data-scroll-speed=".35">Киверин</h1>
         </div>
       </div>
       <div class="hero__info">
@@ -33,6 +33,7 @@
 <script>
 import Badge from './Badge.vue';
 import Button from './Button.vue';
+
 
 export default {
     name: 'HeroSection',
@@ -145,12 +146,23 @@ export default {
 }
 
 @media screen and (max-width: 768px){
+
   .hero__title {
     font-size: 92px;
     &--italic {
       font-size: 72px;
     }
   }
+
+  .hero__desc {
+    font-size: 16px;
+  }
+
+  .hero__field {
+        transform: scale(0.8);
+        width: 100%;
+        margin-right: 20px;
+      }
 
   .hero__icon {
     position: absolute;
@@ -171,6 +183,7 @@ export default {
   }
 
   .badges {
+    opacity: 0;
     transform: scale(0.7);
     position: absolute;
     top: -20px;
@@ -181,4 +194,48 @@ export default {
     z-index: -1;
   }
 }
+
+    @media screen and (max-width: 560px) {
+
+
+      .hero__title {
+        display: flex;
+        place-content: center;
+        font-size: 56px;
+        &--italic {
+          font-size: 46px;
+          display: flex;
+        place-content: center;
+        }
+      }
+
+      .hero__field {
+        transform: scale(0.8);
+        width: 100%;
+        margin: 0;
+      }
+      .hero__info {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .hero__desc {
+        width: 100%;
+        font-size: 16px;
+      }
+        .badges {
+      position: absolute;
+      top: 200px;
+      left: 100px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 8px;
+      z-index: -1;
+    }
+
+  .hero__icon {
+    width: 10em;
+  }
+    }
 </style>

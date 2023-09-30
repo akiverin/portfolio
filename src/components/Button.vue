@@ -1,5 +1,5 @@
 <template>
-    <button class="button"><slot></slot></button>
+    <a class="button" data-scroll data-scroll-to="#contact"><slot></slot></a>
 </template>
 
 <script>
@@ -13,6 +13,7 @@ export default {
     cursor: pointer;
     display: flex;
     padding: 23px 32px;
+    text-decoration: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;

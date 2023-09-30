@@ -1,22 +1,40 @@
 <template>
   <Header />
-  <div class="noisy" :style="{ transform: `translateX(${rotation}%) translateY(${rotation*2}%) translateZ(0px)` }"></div>
-  <main class="main">
+  <main class="main" data-scroll-container>
     <div class="main__wrapper">
-      <HeroSection data-speed="0.8" />
-      <ProjectsSection />
-      <ContactSection @notificate-new="sendNotification"/>
-    </div>
+    <HeroSection data-scroll-section data-scroll-delay="0.2"/>
+    <ProjectsSection data-scroll-section/>
+    <StackSection data-scroll-section data-persistent/>
+    <ContactSection data-scroll-section id="contact" @notificate-new="sendNotification"/>
+   </div>
   </main>
+  <Footer />
+  <div class="background">
+    <div class="background__shadow"></div>
+    <div class="background__frame"></div>
+    <div class="background__noisy noisy" :style="{ transform: `translateX(${rotation}%) translateY(${rotation*2}%) translateZ(0px)` }"></div>
+  </div>
   <Notification v-show="this.notification!=''" :msg="notification" @close-notificate="()=>{this.notification=''}"/>
 </template>
 
 <script>
 import ContactSection from './components/ContactSection.vue';
+import Footer from './components/Footer.vue';
 import Header from './components/Header.vue';
 import HeroSection from './components/HeroSection.vue';
 import Notification from './components/Notification.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
+import StackSection from './components/StackSection.vue';
+
+import LocomotiveScroll from 'locomotive-scroll';
+new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    multiplier: 0.1,
+    class: 'main',
+    repeat: true,
+    duration: 1.2,
+});
 
 export default {
   name: 'App',
@@ -47,19 +65,18 @@ export default {
     Header,
     ProjectsSection,
     ContactSection,
-    Notification
+    Notification,
+    StackSection,
+    Footer
 },
 }
 </script>
 
 <style lang="scss">
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: rgb(26, 24, 30);
+  scroll-behavior:smooth;
   padding: 0;
   margin: 0;
   font-size: 1vw;
@@ -86,6 +103,27 @@ body {
   }
 
 }
+
+.background__shadow {
+  z-index: -2;
+  position: absolute;
+  top: 3170px;
+  background: -webkit-linear-gradient(180deg, rgba(26, 24, 30, 0), rgb(26, 24, 30));
+  background: -moz-linear-gradient(180deg, rgba(26, 24, 30, 0), rgb(26, 24, 30));
+  background: linear-gradient(180deg, rgba(26, 24, 30, 0), rgb(26, 24, 30));
+  width: 100%;
+  height: 200px;
+}
+
+.background__frame {
+    top: 3370px;
+    z-index: -2;
+    background-color: rgb(26, 24, 30);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
 .noisy {
   background: url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png");
   opacity: 0.1;
@@ -93,7 +131,7 @@ body {
   width: 400%;
   height: 400%;
   position: absolute;
-  z-index: -1;
+  z-index: -3;
 }
 
 #app {

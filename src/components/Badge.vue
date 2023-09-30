@@ -20,5 +20,9 @@ export default {
         width: fit-content;
         padding: 6px 10px;
         background: linear-gradient(164deg, #24BCD7 0%, #50E9FF 100%);
+        @media screen and (max-width: 560px) {
+            font-size: 16px;
+            padding: 2px 4px;
+        }
     }
 </style>
