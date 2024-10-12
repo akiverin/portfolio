@@ -1,0 +1,78 @@
+<template>
+    <header class="header">
+        <div class="header__wrapper wrapper">
+            <a href="/" class="header__logo logo">
+                <p class="logo__title visually-hidden">Главная страница</p>
+                <img src="../assets/logo.svg" alt="logo image" class="logo__image">
+            </a>
+            <nav class="header__navigate navigate">
+                <a href="https://github.com/akiverin" class="navigate__link" target="_blank">GitHub</a>
+                <a href="https://vk.com/andkiv" class="navigate__link" target="_blank">VK</a>
+                <a href="https://behance.net/kiverin03fb9c" class="navigate__link" target="_blank">Behance</a>
+            </nav>
+        </div>
+    </header>
+</template>
+
+<script>
+export default {
+    name: "HeaderComponent",
+}
+</script>
+
+<style scoped lang="scss">
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    align-items: center;
+}
+
+.logo__image {
+    width: 184px;
+    padding: 0;
+
+    @media screen and (max-width: 760px) {
+        width: 102px;
+    }
+
+    @media screen and (max-width: 560px) {
+        width: 86px;
+    }
+}
+
+.navigate {
+    display: flex;
+    gap: 60px;
+
+    @media screen and (max-width: 760px) {
+        gap: 40px;
+    }
+
+    @media screen and (max-width: 560px) {
+        gap: 20px;
+    }
+}
+
+.navigate__link {
+    color: #FFF;
+    font-family: 'PP Neue Machina Regular', Inter, arial, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        color: rgb(49, 189, 214);
+    }
+
+    @media screen and (max-width: 760px) {
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 560px) {
+        font-size: 18px;
+    }
+}
+</style>
