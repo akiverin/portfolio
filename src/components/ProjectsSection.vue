@@ -52,8 +52,8 @@ export default {
           name: 'Веб-сайт кафедры менеджмент Московского Политеха',
           desc: 'Проект на React с собственным дизайном интерфейса. Современные и минималистичные решения в верстке, удобство и понятность функционала.',
           media: {
-            type: 'image',
-            title: 'management.png'
+            type: 'video',
+            title: 'project8.mp4'
           },
           link: 'http://management.kiver.net/',
           rep: 'https://github.com/akiverin/department_management',
@@ -75,7 +75,7 @@ export default {
           desc: 'Создание функционального редактора изображений на React, с вычислением цветов, маштабированием изображения, горячими клавишами, модальным окнами, экспортом и импортом изображений.',
           media: {
             type: 'image',
-            title: 'editor.png'
+            title: 'editor.webp'
           },
           link: 'http://editor.kiver.net/',
           rep: 'https://github.com/akiverin/image-editor',
@@ -97,7 +97,7 @@ export default {
           desc: 'App на смартфон для своих заметок, цитатой дня и настройками персонализации. Разработка кроссплатформенного проекта на React Native, local storage, работа с API.',
           media: {
             type: 'image',
-            title: 'project6.png'
+            title: 'project6.webp'
           },
           link: 'https://appgallery.huawei.com/app/C111249837',
           rep: 'https://github.com/akiverin/notesApp',
@@ -119,7 +119,7 @@ export default {
           desc: 'Проект представляет онлайн-игру с фантастическим миром, современным дизайном и интеграцией API для удобной работы. Стек: Адаптивный интерфейс, MySQL, API, Django.',
           media: {
             type: 'image',
-            title: 'project3.jpg'
+            title: 'project3.webp'
           },
           link: 'http://webexam2023.std-1725.ist.mospolytech.ru/',
           rep: 'https://github.com/akiverin/webExam3',
@@ -390,8 +390,14 @@ export default {
 
 @media screen and (max-width: 560px) {
 
+  .projects__icon--sstar {
+    display: none;
+  }
+
   .projects__name {
     font-size: 16em;
+    transform: rotate(-4deg);
+
   }
 
   .projects__title {
@@ -466,6 +472,10 @@ export default {
         height: 30px;
       }
     }
+  }
+
+  .projects__icon--fstar {
+    display: none;
   }
 }
 

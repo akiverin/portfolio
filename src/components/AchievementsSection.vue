@@ -63,7 +63,7 @@ export default {
                     importance: 1,
                     media: {
                         type: 'image',
-                        title: 'a1.jpg'
+                        title: 'a1.webp'
                     },
                     link: 'https://elibrary.ru/item.asp?id=50736683',
                     badges: ['научная статья', 'РИНЦ', 'конференция'],
@@ -74,7 +74,7 @@ export default {
                     importance: 2,
                     media: {
                         type: 'image',
-                        title: 'e1.jpg'
+                        title: 'e1.webp'
                     },
                     link: 'https://s3-api.unionepro.ru/basebucket/66e40304adc1ce89b1ffd972.pdf?s3token=1c64ee5b98f93b0d08558f8d878fda82dcb7c2bb8e7a4f1388d621249200cc51',
                     badges: ['ДПО', 'обучение', 'практика', 'ИИ'],
@@ -86,7 +86,7 @@ export default {
                     importance: 2,
                     media: {
                         type: 'image',
-                        title: 'd4.png'
+                        title: 'd4.webp'
                     },
                     badges: ['конференция', '3 место'],
                 },
@@ -97,7 +97,7 @@ export default {
                     importance: 4,
                     media: {
                         type: 'image',
-                        title: 'd1.jpg'
+                        title: 'd1.webp'
                     },
                     badges: ['конференция', '2 место'],
                 },
@@ -108,7 +108,7 @@ export default {
                     importance: 6,
                     media: {
                         type: 'image',
-                        title: 'd2.jpg'
+                        title: 'd2.webp'
                     },
                     badges: ['конференция', '1 место', 'Казахстан'],
                 },
@@ -119,7 +119,7 @@ export default {
                     importance: 3,
                     media: {
                         type: 'image',
-                        title: 'd3.jpeg'
+                        title: 'd3.webp'
                     },
                     badges: ['конференция', '3 место'],
                 },
@@ -130,7 +130,7 @@ export default {
                     importance: 5,
                     media: {
                         type: 'image',
-                        title: 'd5.jpg'
+                        title: 'd5.webp'
                     },
                     badges: ['конференция', '1 место', 'гран при'],
                 },
@@ -141,7 +141,7 @@ export default {
                     importance: 6,
                     media: {
                         type: 'image',
-                        title: 'd6.jpg'
+                        title: 'd6.webp'
                     },
                     badges: ['конференция', '1 место'],
                 },
@@ -152,7 +152,7 @@ export default {
                     importance: 6,
                     media: {
                         type: 'image',
-                        title: 'd7.png'
+                        title: 'd7.webp'
                     },
                     badges: ['конференция', '1 место'],
                 },
@@ -163,7 +163,7 @@ export default {
                     importance: 7,
                     media: {
                         type: 'image',
-                        title: 'd8.jpeg'
+                        title: 'd8.webp'
                     },
                     badges: ['конференция', '1 место'],
                 },
@@ -174,7 +174,7 @@ export default {
                     importance: 6,
                     media: {
                         type: 'image',
-                        title: 'd9.png'
+                        title: 'd9.webp'
                     },
                     badges: ['конференция', '3 место'],
                 },
@@ -185,7 +185,7 @@ export default {
                     importance: 6,
                     media: {
                         type: 'image',
-                        title: 'd10.png'
+                        title: 'd10.webp'
                     },
                     badges: ['конференция', '1 место'],
                 },
@@ -383,6 +383,7 @@ export default {
     width: 100%;
     border-radius: 20px;
     object-fit: cover;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px -1px 4px rgba(0, 0, 0, 0.08);
 }
 
 .case__actions {

@@ -33,11 +33,11 @@ export default {
     padding: 0;
 
     @media screen and (max-width: 760px) {
-        width: 102px;
+        width: 140px;
     }
 
     @media screen and (max-width: 560px) {
-        width: 86px;
+        width: 100px;
     }
 }
 
@@ -73,6 +73,10 @@ export default {
 
     @media screen and (max-width: 560px) {
         font-size: 18px;
+    }
+
+    @media screen and (max-width: 560px) {
+        font-size: 14px;
     }
 }
 </style>

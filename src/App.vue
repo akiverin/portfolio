@@ -167,6 +167,14 @@ body {
   padding: 0 5%;
 }
 
+@media screen and (max-width: 560px) {
+  .wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

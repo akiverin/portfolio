@@ -239,4 +239,14 @@ export default {
     padding: 0;
   }
 }
+
+@media screen and (max-width: 560px) {
+  .stack__desc {
+    font-size: 14px;
+  }
+
+  .stack__data {
+    font-size: 12px;
+  }
+}
 </style>

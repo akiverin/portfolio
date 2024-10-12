@@ -3,24 +3,24 @@
     <div class="hero__wrapper wrapper">
       <div class="hero__window" data-scroll-section>
         <div class="hero__field hero__field--name">
-          <div class="hero__badges badges" data-scroll data-scroll-speed=".1">
+          <div class="hero__badges badges" data-scroll data-scroll-speed=".06">
             <Badge>team-work</Badge>
             <Badge>design</Badge>
             <Badge>mobile</Badge>
           </div>
-          <h1 class="hero__title" data-scroll data-scroll-speed=".15">Андрей</h1>
+          <h1 class="hero__title" data-scroll data-scroll-speed=".08">Андрей</h1>
           <img src="../assets/icons/fillStar.svg" alt="star icon descorate" class="hero__icon hero__icon--fillStar"
             data-scroll data-scroll-speed=".2">
         </div>
         <div class="hero__field hero__field--post">
-          <h1 class="hero__title hero__title--italic" data-scroll data-scroll-speed=".25">frontend</h1>
+          <h1 class="hero__title hero__title--italic" data-scroll data-scroll-speed=".1">frontend</h1>
           <img src="../assets/icons/arrow.svg" alt="arrow icon descorate" class="hero__icon hero__icon--arrow"
             data-scroll data-scroll-speed=".25">
         </div>
         <div class="hero__field hero__field--surname">
           <img src="../assets/icons/strokeStar.svg" data-scroll data-scroll-speed=".15" alt="star icon descorate"
             class="hero__icon hero__icon--strokeStar">
-          <h1 class="hero__title" data-scroll data-scroll-speed=".35">Киверин</h1>
+          <h1 class="hero__title" data-scroll data-scroll-speed=".1">Киверин</h1>
         </div>
       </div>
       <div class="hero__info">
@@ -150,6 +150,7 @@ export default {
 .badges {
   position: absolute;
   left: -204px;
+  top: 6px;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -309,6 +310,23 @@ export default {
 
   .hero__icon {
     width: 10em;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .hero__desc {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .hero__line {
+    left: -680px;
+  }
+
+  .hero__icon--strokeStar {
+    top: 87%;
+    left: -25%;
+
   }
 }
 </style>
